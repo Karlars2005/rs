@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carpeta de Audiovisual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #abd1e2; /* Color de fondo suave */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            color: hsl(320, 70%, 37%); /* Color principal de las letras */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(255, 226, 245, 0.836); /* Sombra suave */
+        }
+        .imagenes-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .imagen {
+            width: 250px;
+            height: 150px;
+            object-fit: cover; /* Ajuste para mantener la proporción */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(154, 231, 236, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .imagen:hover {
+            transform: scale(1.1);
+        }
+        .color-texto {
+            color: #e65e5e; /* Color para subtítulos o texto adicional */
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .pagina {
+            display: none;
+        }
+        .pagina-activa {
+            display: block;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #e65e5e;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #c75555;
+        }
+    </style>
+</head>
+<body>
+    <h1>MI CARPETA AUDIOVISUAL Y DE PINTURA </h1>
+
+    <!-- Páginas -->
+    <div id="pagina1" class="pagina pagina-activa">
+        <h1>Aquí les dejo algunas imágenes de nuestros trabajos de detrás de cámaras de nuestros CORTOMETRAJES realizados en este cuatrimestre
+            y algunos cuadros de pintura. </h1>
+    </div>
+
+    <div id="pagina2" class="pagina">
+        <div class="imagenes-container">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM.jpeg" alt="Imagen 1">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM (5).jpeg" alt="Imagen 2">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM (4).jpeg" alt="Imagen 3">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM (2).jpeg" alt="Imagen 4">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM (3).jpeg" alt="Imagen 5">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.34.32 PM (1).jpeg" alt="Imagen 6">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM.jpeg" alt="Imagen 7">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM (1).jpeg" alt="Imagen 8">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM (2).jpeg" alt="Imagen 9">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM (3).jpeg" alt="Imagen 10">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM (4).jpeg" alt="Imagen 11">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.35 PM (5).jpeg" alt="Imagen 12">
+            <img class="imagen" src="WhatsApp Image 2024-11-25 at 7.31.36 PM.jpeg" alt="Imagen 13">
+        </div>
+    </div>
+
+    <div id="pagina3" class="pagina">
+        <img class="imagen" src="WhatsApp Image 2024-11-26 at 5.16.26 PM.jpeg" alt="Imagen 14">
+        <img class="imagen" src="WhatsApp Image 2024-11-26 at 5.16.27 PM.jpeg" alt="Imagen 15">
+        <p class="color-texto">Aquí puedes explorar todas tus imágenes y proyectos audiovisuales.</p>
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+        <button onclick="mostrarPagina(1)">Página 1</button>
+        <button onclick="mostrarPagina(2)">Página 2</button>
+        <button onclick="mostrarPagina(3)">Página 3</button>
+    </nav>
+
+    <script>
+        // Función para mostrar la página seleccionada
+        function mostrarPagina(pagina) {
+            // Ocultar todas las páginas
+            const paginas = document.querySelectorAll('.pagina');
+            paginas.forEach(p => p.classList.remove('pagina-activa'));
+
+            // Mostrar la página seleccionada
+            document.getElementById('pagina' + pagina).classList.add('pagina-activa');
+        }
+
+        console.log("Bienvenido a tu carpeta audiovisual.");
+    </script>
+</body>
+</html>
